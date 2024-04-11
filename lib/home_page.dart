@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:m2_flutter_simple_navigation/next_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key, required this.title});
@@ -10,6 +11,8 @@ class HomePage extends StatefulWidget {
 }
 
 class HomePageState extends State<HomePage> {
+  get color => null;
+
   
   @override
   Widget build(BuildContext context) {
@@ -28,9 +31,13 @@ class HomePageState extends State<HomePage> {
               textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.headlineMedium,
             ),
-            const ElevatedButton(
-              onPressed: null,
-              child: Text("Passer à la page suivante")
+            ElevatedButton(
+              onPressed: () {
+                const nextPage =  NextPage(color:  Colors.lightGreenAccent);
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (BuildContext buildContext) => nextPage));
+              },
+              child: const Text("Passer à la page suivante")
             )
           ]
         ),
