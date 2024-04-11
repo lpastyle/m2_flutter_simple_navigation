@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class NextPage extends StatefulWidget {
-final Color color;
+  final Color color;
 
   // Ctor
   const NextPage({super.key, required this.color});
@@ -12,16 +12,37 @@ final Color color;
 }
 
 class NextPageState extends State<NextPage> {
+
+  bool showAppBar = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text("Page suivante"),
-          backgroundColor: widget.color,
-        ),
-        body: const Center(
-          child: Text("CECI EST LA PAGE SUIVANTE"),
+      // plus possible de revenir sur la home page quand l'AppBar est cachée
+      appBar: showAppBar ? AppBar(
+        title: const Text("Page suivante"),
+        backgroundColor: widget.color,
+      ) : null,
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            ElevatedButton(
+              onPressed: () => setState(() => showAppBar = ! showAppBar),
+              child: Text(showAppBar ? "Cacher AppBar" : "Montrer AppBar")),
+             Text("CECI EST LA PAGE SUIVANTE",
+              textAlign: TextAlign.center,
+              style: Theme.of(context).textTheme.headlineMedium
+            ),
+            ElevatedButton(
+              // STEP 1
+              //onPressed: null,
+              onPressed: () => Navigator.of(context).pop(),
+              child: const Text("Retour page d'accueil"))
+          ],
         )
+      )
     );
   }
 
