@@ -35,11 +35,6 @@ class NextPageState extends State<NextPage> {
               textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.headlineMedium
             ),
-            ElevatedButton(
-              // STEP 1
-              //onPressed: null,
-              onPressed: () => Navigator.of(context).pop(),
-              child: const Text("Retour page d'accueil"))
           ],
         )
       )
