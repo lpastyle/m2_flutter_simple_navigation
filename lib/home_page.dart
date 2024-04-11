@@ -19,11 +19,21 @@ class HomePageState extends State<HomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: 
+        child: Column (
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisSize: MainAxisSize.max,
+          children: [
             Text(
-              'THIS THE HOME PAGE',
+              'CECI EST LA PAGE D\'ACCUEIL',
+              textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            const ElevatedButton(
+              onPressed: null,
+              child: Text("Passer à la page suivante")
+            )
+          ]
+        ),
       ),
     );
   }
