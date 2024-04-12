@@ -35,7 +35,8 @@ class HomePageState extends State<HomePage> {
               onPressed: () {
                 const nextPage =  NextPage(color:  Colors.lightGreenAccent);
                 Navigator.of(context).push(
-                  MaterialPageRoute(builder: (BuildContext buildContext) => nextPage));
+                  // MaterialPageRoute(builder: (BuildContext buildContext) => nextPage));
+                  MaterialPageRoute(builder: (context) => nextPage));
               },
               child: const Text("Passer à la page suivante")
             )
