@@ -16,11 +16,11 @@ class NextPageState extends State<NextPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text("Page suivante"),
+          title: const Text("Next Page"),
           backgroundColor: widget.color,
         ),
         body: const Center(
-          child: Text("CECI EST LA PAGE SUIVANTE"),
+          child: Text("THIS IS THE NEXT PAGE"),
         )
     );
   }
