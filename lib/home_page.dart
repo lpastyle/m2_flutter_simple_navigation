@@ -24,7 +24,7 @@ class HomePageState extends State<HomePage> {
           mainAxisSize: MainAxisSize.max,
           children: [
             Text(
-              'CECI EST LA PAGE D\'ACCUEIL',
+              'THIS IS THE HOME PAGE',
               textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.headlineMedium,
             ),
