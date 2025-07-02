@@ -21,7 +21,7 @@ class HomePageState extends State<HomePage> {
       body: Center(
         child: 
             Text(
-              'THIS THE HOME PAGE',
+              'THIS IS THE HOME PAGE',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
       ),
