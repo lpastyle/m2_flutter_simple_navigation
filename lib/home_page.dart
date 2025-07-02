@@ -30,7 +30,8 @@ class HomePageState extends State<HomePage> {
             ),
             const ElevatedButton(
               onPressed: null,
-              child: Text("Passer à la page suivante")
+              child: Text("Go to Next Page",
+              style: TextStyle(fontSize: 32),)
             )
           ]
         ),
