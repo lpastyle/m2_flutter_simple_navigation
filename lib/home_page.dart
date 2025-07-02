@@ -27,7 +27,7 @@ class HomePageState extends State<HomePage> {
           mainAxisSize: MainAxisSize.max,
           children: [
             Text(
-              'CECI EST LA PAGE D\'ACCUEIL',
+              'THIS THE HOME PAGE',
               textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.headlineMedium,
             ),
@@ -37,7 +37,7 @@ class HomePageState extends State<HomePage> {
                 Navigator.of(context).push(
                   MaterialPageRoute(builder: (BuildContext buildContext) => nextPage));
               },
-              child: const Text("Passer à la page suivante")
+              child: const Text("Go to Next Page")
             )
           ]
         ),
