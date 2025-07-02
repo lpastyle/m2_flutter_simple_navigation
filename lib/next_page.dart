@@ -20,7 +20,7 @@ class NextPageState extends State<NextPage> {
     return Scaffold(
       // plus possible de revenir sur la home page quand l'AppBar est cachée
       appBar: showAppBar ? AppBar(
-        title: const Text("Page suivante"),
+        title: const Text("Next Page"),
         backgroundColor: widget.color,
       ) : null,
       body: Center(
@@ -30,8 +30,8 @@ class NextPageState extends State<NextPage> {
           children: [
             ElevatedButton(
               onPressed: () => setState(() => showAppBar = ! showAppBar),
-              child: Text(showAppBar ? "Cacher AppBar" : "Montrer AppBar")),
-             Text("CECI EST LA PAGE SUIVANTE",
+              child: Text(showAppBar ? "Hide AppBar" : "Show AppBar")),
+             Text("THIS IS THE NEXT PAGE",
               textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.headlineMedium
             ),
